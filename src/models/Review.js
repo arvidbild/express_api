@@ -5,7 +5,7 @@ var mongoose = require("mongoose");
 
 
 var Schema = mongoose.Schema;
-var ReviewSchema = new Schema ({
+var reviewSchema = new Schema ({
    
     user: {
     type: Schema.Types.ObjectId,
@@ -28,3 +28,6 @@ required: [true, "You have to provide a number"],
     type: String
   } 
 });
+
+var Review = mongoose.model("Review", reviewSchema);
+module.exports = Review;
